@@ -8,6 +8,6 @@ test('Playwright puede ejecutar una prueba en CI', async ({ page }) => {
   `);
 
   await expect(
-    page.getByRole('heading', { name: 'Entorno QA NO listo' }),
+    page.getByRole('heading', { name: 'Entorno QA listo' }),
   ).toBeVisible();
 });
