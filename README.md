@@ -38,3 +38,16 @@ npm run test:login
 npm run test:api
 npm run test:list
 ```
+
+## Skill reutilizable para CI
+
+El proyecto incluye `.agents/skills/generar-workflow-ci/SKILL.md`. La skill inspecciona un proyecto Playwright, propone un workflow con estado `PLAN_PENDIENTE` y solo crea o actualiza `.github/workflows/playwright.yml` después de recibir `PLAN APROBADO`.
+
+Invocación sugerida:
+
+```text
+Usa $generar-workflow-ci en este proyecto.
+Objetivo: crear el primer workflow de CI para el smoke estable.
+Alcance: solo .github/workflows/playwright.yml.
+No modifiques archivos hasta que yo responda PLAN APROBADO.
+```

@@ -115,3 +115,20 @@ por una fuente. No inventa el puente entre capas: lo declara y lo somete a aprob
   espera el gate humano. No uses `ACEPTADO`.
 - `ESCALADO`: falta una entrada, el producto no ofrece endpoint de preparación o de limpieza,
   existe una ambigüedad no resoluble, o terminan 3 intentos sin cumplir ambas condiciones.
+
+---
+
+## Skill reutilizable: `generar-workflow-ci`
+
+### Objetivo
+Proponer y, después de `PLAN APROBADO`, crear o actualizar
+`.github/workflows/playwright.yml` a partir de evidencia del repositorio.
+
+### Uso
+Invocar `.agents/skills/generar-workflow-ci/SKILL.md` con proyecto, objetivo,
+alcance y comando cuando se necesite el primer CI de Playwright.
+
+### Gate
+- `PLAN_PENDIENTE`: inventario y YAML propuesto; cero archivos modificados.
+- `CANDIDATO`: YAML creado y validado; espera autorización para commit o push.
+- `ESCALADO`: falta información o el comando local no es reproducible.

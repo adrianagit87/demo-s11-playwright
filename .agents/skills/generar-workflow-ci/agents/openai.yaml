@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generar workflow CI"
+  short_description: "Propone y crea un workflow Playwright seguro"
+  default_prompt: "Revisa este proyecto Playwright y propón un workflow CI. No escribas archivos hasta que yo apruebe el plan."
